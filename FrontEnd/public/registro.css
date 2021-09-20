@@ -1,0 +1,40 @@
+body{
+    display: inherit;
+  -ms-flex-align: center;
+  -ms-flex-pack: center;
+  -webkit-box-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  justify-content: center;
+  padding-top: 80px;
+  padding-bottom: 80px;
+  background-color: rgb(119, 100, 165);
+}
+.form-signin{ 
+    margin-top: 0px;
+    margin-left: 500px;
+    margin-right: 500px;
+    background-color: #fafbfc;
+}
+.btn-primary, .btn-primary:active, .btn-primary:visited {
+    background-color: #4e83c9  ;
+    border-color: #4e83c9 ;
+}
+
+.btn-primary:hover{
+    background-color: #2b5388 ;
+    border-color: #2b5388 ;
+}
+
+.btn-sec, .btn-sec:active, .btn-sec:visited {
+    background-color: #f52525 ;
+    border-color: #f52525;
+}
+
+.btn-sec:hover{
+    background-color: #b62323;
+    border-color: #b62323;
+}
+.nounderline {
+    text-decoration: none !important
+  }
