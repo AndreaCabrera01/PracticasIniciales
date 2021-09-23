@@ -2,7 +2,7 @@
     <div class = "container p-10 text-center">
         <h1>Publicaciones : </h1>
         <div class="col-md-4 text-center" *ngFor="let publicacion of publicaciones">
-        
+            <br>
             <div class="card text-center">
                 <div class="card-header ">
                     {{publicacion.usuario}}
@@ -10,12 +10,12 @@
                         <i class="far fa-trash-alt"></i>
                       </button>
                 </div>
-                <div class="card-body text-center">
+              <div class="card-body text-center">
                     <p>{{publicacion.mensaje}}</p>
                     <p>Created At {{publicacion.created_at | date: 'yyyy-MM-dd'}}</p>
-                    <a [routerLink]="['/publicaciones/edit', publicacion.id]" class="btn btn-info btn-block">
+                    <!---<a [routerLink]="['/publicaciones/edit', publicacion.id]" class="btn btn-info btn-block">
                       EDIT PUBLICATION
-                    </a>
+                    </a>--->
                 </div>
             </div>
         

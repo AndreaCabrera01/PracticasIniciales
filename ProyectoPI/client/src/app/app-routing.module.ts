@@ -3,12 +3,17 @@ import { RouterModule, Routes } from '@angular/router';
 import {PublicacionesListComponent } from './components/publicaciones-list/publicaciones-list.component';
 import { PublicacionesFormComponent } from './components/publicaciones-form/publicaciones-form.component';
 import { RegisterFormComponent } from './components/register-form/register-form.component';
+import { LoginFormComponent } from './components/login-form/login-form.component';
 
 const routes: Routes = [
   {
     path: '',
-    redirectTo: '/register',
+    redirectTo: '/login',
     pathMatch: 'full'
+  },
+  {
+    path: 'login',
+    component: LoginFormComponent
   },
   {
     path: 'register',

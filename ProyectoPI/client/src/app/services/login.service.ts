@@ -1,0 +1,31 @@
+import { HttpClient } from '@angular/common/http';
+import { Injectable } from '@angular/core';
+import { Registro } from '../model/Registro';
+
+@Injectable({
+  providedIn: 'root'
+})
+export class LoginService {
+
+  API_URI = 'http://localhost:3000/api';
+
+  constructor(private http: HttpClient) { }
+
+
+  getRegisters(){
+    return this.http.get(`${this.API_URI}/register`);
+  }
+
+  getRegister(id: string){
+    return this.http.get(`${this.API_URI}/register/${id}`);
+  }
+  deleteRegistern(id: string){
+    return this.http.delete(`${this.API_URI}/register/${id}`);
+  }
+  saveRegister(registro: Registro){
+    return this.http.post(`${this.API_URI}/register`,registro);
+  }
+  updateRegister(id: string, updateRegistro: Registro){
+    return this.http.put(`${this.API_URI}/register/${id}`,updateRegistro);
+  }
+}

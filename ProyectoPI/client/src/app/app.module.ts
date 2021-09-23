@@ -11,7 +11,8 @@ import { UsersListComponent } from './components/users-list/users-list.component
 import { FormsModule } from '@angular/forms';
 
 import {PublicacionesService} from './services/publicaciones.service';
-import { RegisterFormComponent } from './components/register-form/register-form.component'
+import { RegisterFormComponent } from './components/register-form/register-form.component';
+import { LoginFormComponent } from './components/login-form/login-form.component'
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { RegisterFormComponent } from './components/register-form/register-form.
     PublicacionesListComponent,
     UsersFormComponent,
     UsersListComponent,
-    RegisterFormComponent
+    RegisterFormComponent,
+    LoginFormComponent
   ],
   imports: [
     BrowserModule,

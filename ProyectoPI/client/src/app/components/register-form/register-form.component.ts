@@ -33,12 +33,14 @@ export class RegisterFormComponent implements OnInit {
           res => {
             console.log(res);
             this.registro = res;
+
             this.edit = true;
           },
           err => console.log(err)
         )
     }
   }
+
 
   saveNewRegister() {
     this.registerServices.saveRegister(this.registro)
