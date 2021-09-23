@@ -10,7 +10,8 @@ import { UsersFormComponent } from './components/users-form/users-form.component
 import { UsersListComponent } from './components/users-list/users-list.component';
 import { FormsModule } from '@angular/forms';
 
-import {PublicacionesService} from './services/publicaciones.service'
+import {PublicacionesService} from './services/publicaciones.service';
+import { RegisterFormComponent } from './components/register-form/register-form.component'
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import {PublicacionesService} from './services/publicaciones.service'
     PublicacionesFormComponent,
     PublicacionesListComponent,
     UsersFormComponent,
-    UsersListComponent
+    UsersListComponent,
+    RegisterFormComponent
   ],
   imports: [
     BrowserModule,

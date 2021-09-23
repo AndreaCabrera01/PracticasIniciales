@@ -2,12 +2,17 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import {PublicacionesListComponent } from './components/publicaciones-list/publicaciones-list.component';
 import { PublicacionesFormComponent } from './components/publicaciones-form/publicaciones-form.component';
+import { RegisterFormComponent } from './components/register-form/register-form.component';
 
 const routes: Routes = [
   {
     path: '',
-    redirectTo: '/publicaciones',
+    redirectTo: '/register',
     pathMatch: 'full'
+  },
+  {
+    path: 'register',
+    component: RegisterFormComponent
   },
   {
     path: 'publicaciones',
