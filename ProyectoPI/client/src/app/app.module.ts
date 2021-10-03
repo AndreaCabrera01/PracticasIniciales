@@ -13,7 +13,9 @@ import { FormsModule } from '@angular/forms';
 
 import {PublicacionesService} from './services/publicaciones.service';
 import { RegisterFormComponent } from './components/register-form/register-form.component';
-import { LoginFormComponent } from './components/login-form/login-form.component'
+import { LoginFormComponent } from './components/login-form/login-form.component';
+import { PerfilComponent } from './components/perfil/perfil.component';
+import { PublicacionesComentariosComponent } from './components/publicaciones-comentarios/publicaciones-comentarios.component'
 
 @NgModule({
   declarations: [
@@ -24,7 +26,9 @@ import { LoginFormComponent } from './components/login-form/login-form.component
     UsersFormComponent,
     UsersListComponent,
     RegisterFormComponent,
-    LoginFormComponent
+    LoginFormComponent,
+    PerfilComponent,
+    PublicacionesComentariosComponent
   ],
   imports: [
     BrowserModule,

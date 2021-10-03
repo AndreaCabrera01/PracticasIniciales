@@ -4,6 +4,8 @@ import {PublicacionesListComponent } from './components/publicaciones-list/publi
 import { PublicacionesFormComponent } from './components/publicaciones-form/publicaciones-form.component';
 import { RegisterFormComponent } from './components/register-form/register-form.component';
 import { LoginFormComponent } from './components/login-form/login-form.component';
+import { PerfilComponent} from './components/perfil/perfil.component';
+import { PublicacionesComentariosComponent } from './components/publicaciones-comentarios/publicaciones-comentarios.component';
 
 const routes: Routes = [
   {
@@ -28,8 +30,17 @@ const routes: Routes = [
     component: PublicacionesFormComponent
   },
   {
-    path: 'publicaciones/ver/:id',
-    component: PublicacionesFormComponent
+    path: 'perfil/:id',
+    component: PerfilComponent
+  },
+  {
+    path: 'publicaciones/comentarios/:id',
+    component: PublicacionesComentariosComponent
+  },
+  {
+    //AGREGAR EL VER COMENTARIOS
+    path: 'publicaciones/vercomentarios/:id',
+    component: PublicacionesComentariosComponent
   }
 ];
 

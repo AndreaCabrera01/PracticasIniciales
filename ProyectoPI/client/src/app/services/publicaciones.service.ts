@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import {HttpClient} from '@angular/common/http';
 import { Publicacion } from '../model/publicacione';
+import { Observable } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -25,8 +26,8 @@ export class PublicacionesService {
   savePublicacion(publicacion: Publicacion){
     return this.http.post(`${this.API_URI}/publicaciones`,publicacion);
   }
-  updatePublicacion(id: string, updatePublicacion: Publicacion){
-    return this.http.put(`${this.API_URI}/publicaciones/${id}`,updatePublicacion);
+  updatePublicacion(id: string, updatedPublicacion: Publicacion): Observable<Publicacion>{
+    return this.http.put(`${this.API_URI}/publicaciones/${id}`,updatedPublicacion);
   }
 
 }

@@ -4,6 +4,8 @@ import { RegisterService } from 'src/app/services/register.service';
 import { Registro } from 'src/app/model/Registro';
 import { ActivatedRoute, Router } from '@angular/router';
 
+
+
 @Component({
   selector: 'app-register-form',
   templateUrl: './register-form.component.html',

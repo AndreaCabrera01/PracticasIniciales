@@ -12,4 +12,7 @@ export class NavigationComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  editUser(id: string){
+    
+  }
 }

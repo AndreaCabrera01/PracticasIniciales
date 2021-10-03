@@ -14,15 +14,21 @@ class PublicacionesController{
         });
     }
 
+    public async getOne(req: Request, res:Response): Promise <void>{
+        const {id} = req.params;
+        await pool.query('SELECT * FROM publicaciones WHERE id= ?', [id]);
+        res.json({text: 'Publicacion encontrada'})
 
-    public getOne(req: Request, res: Response){
-      const {id} = req.params;
-      db.query('SELECT * FROM publicaciones WHERE id = ?', [id], function(err, result, fields) {
-        if (err) throw err;
-        res.json(result);
-    });
-   
-    } 
+    
+    }
+
+    //public getOne(req: Request, res: Response){
+     // const {id} = req.params;
+     // db.query('SELECT * FROM publicaciones WHERE id = ?', [id], function(err, result, fields) {
+      //  if (err) throw err;
+       // res.json(result);
+    //});
+    //} 
     public crate (req: Request, res: Response){
         const result = db.query('INSERT INTO publicaciones set ?', [req.body]);
         console.log(result)

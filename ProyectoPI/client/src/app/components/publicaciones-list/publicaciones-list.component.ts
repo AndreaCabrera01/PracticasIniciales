@@ -28,6 +28,8 @@ export class PublicacionesListComponent implements OnInit {
       );
   }
 
+
+
   deletePublicacion(id: string) {
     this.publicacionesService.deletePublicacion(id)
       .subscribe(
@@ -37,6 +39,10 @@ export class PublicacionesListComponent implements OnInit {
         },
         err => console.error(err)
       )
+  }
+
+  añadirPublicacion(id: string){
+    console.log(id);
   }
 
 }

@@ -1,0 +1,43 @@
+<div class="row">
+    <div class="card">
+      <div class="card-body">
+        <form action="">
+          <h3>&nbsp; &nbsp;&nbsp;  &nbsp;&nbsp; PUBLICACIÓN  &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;</h3>
+          <div class="form-group">
+            <input type="text" name="usuario" [(ngModel)]="publicacion.usuario" placeholder="Usuario" class="form-control" disabled>
+            
+          </div>
+          <div class="form-group">
+            <textarea name="mensaje"  rows="2" [(ngModel)]="publicacion.mensaje" placeholder="Mensaje" class="form-control" disabled></textarea>
+          </div>
+          <div class="form-group">
+            
+            <select type="text" name="tipo" [(ngModel)]="publicacion.tipo" placeholder="Tipo" class="form-control" disabled>
+              <option>Curso</option>
+              <option>Catedrático</option>
+            </select>
+          </div>
+        </form>
+      </div>
+    </div>
+</div>
+
+    <br>
+    <br>
+    <hr/>
+    <br>
+    <br>
+
+    <div class="card2">
+        <div class="card-body">
+          <form action="">
+            <h3> &nbsp;NUEVO COMENTARIO  &nbsp;</h3>
+            <div class="form-group">
+              <textarea name="comentario"  rows="2" placeholder="Comentario" class="form-control" autofocus></textarea>
+            </div>
+            <button class = "btn btn-success btn-block">
+              Save
+            </button>
+          </form>
+        </div>
+</div>
