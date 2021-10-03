@@ -8,6 +8,7 @@ import { PublicacionesFormComponent } from './components/publicaciones-form/publ
 import { PublicacionesListComponent } from './components/publicaciones-list/publicaciones-list.component';
 import { UsersFormComponent } from './components/users-form/users-form.component';
 import { UsersListComponent } from './components/users-list/users-list.component';
+
 import { FormsModule } from '@angular/forms';
 
 import {PublicacionesService} from './services/publicaciones.service';

@@ -26,6 +26,10 @@ const routes: Routes = [
   {
     path: 'publicaciones/add',
     component: PublicacionesFormComponent
+  },
+  {
+    path: 'publicaciones/ver/:id',
+    component: PublicacionesFormComponent
   }
 ];
 

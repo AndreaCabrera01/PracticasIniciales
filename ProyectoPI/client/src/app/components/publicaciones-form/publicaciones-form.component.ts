@@ -1,5 +1,5 @@
 import { Component, HostBinding, OnInit } from '@angular/core';
-import { ActivatedRoute, Router } from '@angular/router';
+import { ActivatedRoute, Router} from '@angular/router';
 import { PublicacionesService } from 'src/app/services/publicaciones.service';
 import { Publicacion } from 'src/app/model/publicacione';
 
