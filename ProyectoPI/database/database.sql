@@ -2,6 +2,9 @@ CREATE DATABASE ng_publicaciones_db;
 
 USE ng_publicaciones_db;
 
+--ACTUALIZAR LA TABLA DE PUBLICACIONES CON 
+-- DATE EN VEZ DE TIMESTAMP
+
 CREATE TABLE publicaciones(
     id INT(11) NOT NULL AUTO_INCREMENT PRIMARY KEY,
     usuario VARCHAR(180),
@@ -19,6 +22,11 @@ CREATE TABLE users(
     password VARCHAR(255),
     email VARCHAR(255)
 
+);
+
+CREATE TABLE comentarios(
+    id VARCHAR(11),
+    comentario VARCHAR(255)
 );
 
 

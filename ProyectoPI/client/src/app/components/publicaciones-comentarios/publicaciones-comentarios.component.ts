@@ -2,7 +2,7 @@ import { Component, HostBinding, OnInit } from '@angular/core';
 import { ActivatedRoute, Router} from '@angular/router';
 import { PublicacionesService } from 'src/app/services/publicaciones.service';
 import { Publicacion } from 'src/app/model/publicacione';
-import { ThrowStmt } from '@angular/compiler';
+
 
 @Component({
   selector: 'app-publicaciones-comentarios',
@@ -25,6 +25,8 @@ export class PublicacionesComentariosComponent implements OnInit {
   constructor(private publicacionService: PublicacionesService, private router: Router, private activatedRoute: ActivatedRoute) { }
 
   ngOnInit() {
+    
+
     const params = this.activatedRoute.snapshot.params;
     
     if (params.id) {
@@ -38,6 +40,8 @@ export class PublicacionesComentariosComponent implements OnInit {
         )
     }
   }
+
+ 
 
   saveNewPublicacion() {
     delete this.publicacion.created_at;
