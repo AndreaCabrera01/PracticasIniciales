@@ -15,6 +15,7 @@ export class PublicacionesListComponent implements OnInit {
 
   
   ngOnInit() {
+    
     this.getPublicaciones();
   }
 

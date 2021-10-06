@@ -16,6 +16,7 @@ export class PublicacionesService {
   getPublicaciones(){
     return this.http.get(`${this.API_URI}/publicaciones`);
   }
+  
 
   getPublicacion(id: string){
     return this.http.get(`${this.API_URI}/publicaciones/${id}`);

@@ -1,10 +1,12 @@
-<!-- <div class="row">
+<div class="row">
+  <div class=" text-center" *ngFor="let publicacion of publicaciones">
+ 
     <div class="card">
       <div class="card-body">
         <form action="">
           <h3>&nbsp; &nbsp;&nbsp;  &nbsp;&nbsp; PUBLICACIÓN  &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;</h3>
           <div class="form-group">
-            <input type="text" name="usuario" [(ngModel)]="publicacion.usuario" class="form-control" disabled>{{publicacion.mensaje}}
+            <input type="text" name="usuario" [(ngModel)]="publicacion.usuario" class="form-control" disabled>
             
           </div>
           <div class="form-group">
@@ -20,14 +22,15 @@
         </form>
       </div>
     </div>
-</div> -->
+    </div>
+</div> 
 
     <br>
     <br>
     <hr/>
     <br>
     <br>
-
+    
     <div class="card2">
         <div class="card-body">
           <form action="">
