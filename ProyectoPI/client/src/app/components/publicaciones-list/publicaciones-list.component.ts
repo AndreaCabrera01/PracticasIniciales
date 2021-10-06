@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 import { PublicacionesService } from 'src/app/services/publicaciones.service';
+import { LoginService } from 'src/app/services/login.service';
 
 @Component({
   selector: 'app-publicaciones-list',
@@ -11,11 +12,13 @@ export class PublicacionesListComponent implements OnInit {
 
   publicaciones: any = [];
 
-  constructor(private publicacionesService: PublicacionesService) { }
+  registros: any = [];
+
+  constructor(private publicacionesService: PublicacionesService, private loginService: LoginService) { }
 
   
   ngOnInit() {
-    
+    this.getRegistros();
     this.getPublicaciones();
   }
 
@@ -24,6 +27,16 @@ export class PublicacionesListComponent implements OnInit {
       .subscribe(
         res => {
           this.publicaciones = res;
+        },
+        err => console.error(err)
+      );
+  }
+
+  getRegistros() {
+    this.loginService.getRegisters()
+      .subscribe(
+        res => {
+          this.registros = res;
         },
         err => console.error(err)
       );
@@ -45,5 +58,7 @@ export class PublicacionesListComponent implements OnInit {
   añadirPublicacion(id: string){
     console.log(id);
   }
+
+  //REGISTROS
 
 }

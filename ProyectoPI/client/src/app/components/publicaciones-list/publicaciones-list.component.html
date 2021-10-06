@@ -1,6 +1,8 @@
 
     <div class = "container p-10 text-center">
-      <a class="btn btn-success btn-block" [routerLink]="['/perfil', publicaciones.id]">VER PERFIL</a>
+      <div class=" text-center" *ngFor="let registro of registros">
+      <a class="btn btn-success btn-block" [routerLink]="['/perfil', registro.id]">VER PERFIL</a>
+    </div>
       <hr/>
         <form class="form-inline">
           

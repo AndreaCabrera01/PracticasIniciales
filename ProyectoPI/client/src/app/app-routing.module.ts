@@ -3,6 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 import {PublicacionesListComponent } from './components/publicaciones-list/publicaciones-list.component';
 import { PublicacionesFormComponent } from './components/publicaciones-form/publicaciones-form.component';
 import { RegisterFormComponent } from './components/register-form/register-form.component';
+import { LoginComponent } from './login/login.component';
 import { LoginFormComponent } from './components/login-form/login-form.component';
 import { PerfilComponent} from './components/perfil/perfil.component';
 import { PublicacionesComentariosComponent } from './components/publicaciones-comentarios/publicaciones-comentarios.component';
