@@ -8,6 +8,7 @@ const morgan_1 = __importDefault(require("morgan"));
 const cors_1 = __importDefault(require("cors"));
 const indexRoutes_1 = __importDefault(require("./routes/indexRoutes"));
 const publicacionesRoutes_1 = __importDefault(require("./routes/publicacionesRoutes"));
+const comentariosRoutes_1 = __importDefault(require("./routes/comentariosRoutes"));
 const registerRoutes_1 = __importDefault(require("./routes/registerRoutes"));
 class Server {
     constructor() {
@@ -25,6 +26,7 @@ class Server {
     routes() {
         this.app.use(indexRoutes_1.default);
         this.app.use('/api/publicaciones', publicacionesRoutes_1.default);
+        this.app.use('/api/comentarios', comentariosRoutes_1.default);
         this.app.use('/api/register', registerRoutes_1.default);
     }
     start() {

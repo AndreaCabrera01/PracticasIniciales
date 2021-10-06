@@ -6,6 +6,8 @@ import { RegisterFormComponent } from './components/register-form/register-form.
 import { LoginFormComponent } from './components/login-form/login-form.component';
 import { PerfilComponent} from './components/perfil/perfil.component';
 import { PublicacionesComentariosComponent } from './components/publicaciones-comentarios/publicaciones-comentarios.component';
+import { PublicacionesComentariosListComponent} from './components/publicaciones-comentarios-list/publicaciones-comentarios-list.component';
+
 
 const routes: Routes = [
   {
@@ -40,7 +42,7 @@ const routes: Routes = [
   {
     //AGREGAR EL VER COMENTARIOS
     path: 'publicaciones/vercomentarios/:id',
-    component: PublicacionesComentariosComponent
+    component: PublicacionesComentariosListComponent
   }
 ];
 

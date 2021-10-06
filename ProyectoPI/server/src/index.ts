@@ -4,6 +4,7 @@ import cors from 'cors';
 
 import indexRoutes from './routes/indexRoutes';
 import publicacionesRoutes from './routes/publicacionesRoutes';
+import comentariosRoutes from './routes/comentariosRoutes';
 import register from './routes/registerRoutes';
 import registerRoutes from './routes/registerRoutes';
 
@@ -27,6 +28,7 @@ class   Server {
     routes(): void{
         this.app.use(indexRoutes);
         this.app.use('/api/publicaciones',publicacionesRoutes)
+        this.app.use('/api/comentarios',comentariosRoutes)
         this.app.use('/api/register', registerRoutes)
 
     }

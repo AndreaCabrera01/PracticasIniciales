@@ -15,7 +15,8 @@ import {PublicacionesService} from './services/publicaciones.service';
 import { RegisterFormComponent } from './components/register-form/register-form.component';
 import { LoginFormComponent } from './components/login-form/login-form.component';
 import { PerfilComponent } from './components/perfil/perfil.component';
-import { PublicacionesComentariosComponent } from './components/publicaciones-comentarios/publicaciones-comentarios.component'
+import { PublicacionesComentariosComponent } from './components/publicaciones-comentarios/publicaciones-comentarios.component';
+import { PublicacionesComentariosListComponent } from './components/publicaciones-comentarios-list/publicaciones-comentarios-list.component'
 
 @NgModule({
   declarations: [
@@ -28,7 +29,8 @@ import { PublicacionesComentariosComponent } from './components/publicaciones-co
     RegisterFormComponent,
     LoginFormComponent,
     PerfilComponent,
-    PublicacionesComentariosComponent
+    PublicacionesComentariosComponent,
+    PublicacionesComentariosListComponent
   ],
   imports: [
     BrowserModule,

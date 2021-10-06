@@ -36,9 +36,9 @@
           <form action="">
             <h3> &nbsp;NUEVO COMENTARIO  &nbsp;</h3>
             <div class="form-group">
-              <textarea name="comentario"  rows="2" placeholder="Comentario" class="form-control" autofocus></textarea>
+              <textarea name="comentario"  rows="2" placeholder="Comentario" [(ngModel)]="comentario.comentario" class="form-control" autofocus></textarea>
             </div>
-            <button class = "btn btn-success btn-block">
+            <button class = "btn btn-success btn-block" (click)="saveNewComentario()">
               Save
             </button>
           </form>

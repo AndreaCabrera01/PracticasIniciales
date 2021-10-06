@@ -1,6 +1,8 @@
 import { Component, HostBinding, OnInit } from '@angular/core';
 import { ActivatedRoute, Router} from '@angular/router';
 import { PublicacionesService } from 'src/app/services/publicaciones.service';
+import { Comentarios } from 'src/app/model/comentarios';
+import { ComentariosService } from 'src/app/services/comentarios.service';
 import { Publicacion } from 'src/app/model/publicacione';
 
 
@@ -12,17 +14,25 @@ import { Publicacion } from 'src/app/model/publicacione';
 export class PublicacionesComentariosComponent implements OnInit {
 
   publicaciones: any = [];
+
+  comentario: Comentarios = {
+    id: 0,
+    comentario: '',
+  };
   
-  constructor(private publicacionesService: PublicacionesService, private activatedRoute: ActivatedRoute) { }
+  
+  constructor(private publicacionesService: PublicacionesService,private comentariosService: ComentariosService, private activatedRoute: ActivatedRoute, private router: Router) { }
 
   
   ngOnInit() {
     const params = this.activatedRoute.snapshot.params;
+    const idElegida = params.id;
+    this.comentario.id = idElegida;
+    console.log(this.comentario.id);
     if (params.id) {
       this.publicacionesService.getPublicacion(params.id)
         .subscribe(
           res => {
-            console.log(res);
             this.publicaciones = res;
           },
           err => console.log(err)
@@ -38,6 +48,17 @@ export class PublicacionesComentariosComponent implements OnInit {
         },
         err => console.error(err)
       );
+  }
+
+  saveNewComentario() {
+    this.comentariosService.saveComentarios(this.comentario)
+      .subscribe(
+        res => {
+          console.log(res);
+          this.router.navigate(['/publicaciones']);
+        },
+        err => console.error(err)
+      )
   }
 
   
