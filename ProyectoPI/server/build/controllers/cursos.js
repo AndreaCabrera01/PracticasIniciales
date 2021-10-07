@@ -33,9 +33,9 @@ class CursosController {
         });
     }
     crate(req, res) {
-        const result = database_2.default.query('INSERT INTO cursosDisp set ?', [req.body]);
+        const result = database_2.default.query('INSERT INTO cursos set ?', [req.body]);
         console.log(result);
-        res.json({ message: 'cursosDisp saved' });
+        res.json({ message: 'cursos saved' });
     }
     delete(req, res) {
         const { id } = req.params;

@@ -18,9 +18,9 @@ class CursosController{
     }
 
     public crate (req: Request, res: Response){
-        const result = db.query('INSERT INTO cursosDisp set ?', [req.body]);
+        const result = db.query('INSERT INTO cursos set ?', [req.body]);
         console.log(result)
-        res.json({message: 'cursosDisp saved'});
+        res.json({message: 'cursos saved'});
     }
 
     public delete (req: Request, res: Response){

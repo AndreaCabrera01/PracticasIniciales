@@ -27,6 +27,10 @@ export class VerCursosComponent implements OnInit {
     this.getCursos();
 
     const params = this.activatedRoute.snapshot.params;
+    const idElegida = params.id;
+    this.curso.id = idElegida;
+    console.log(this.curso.id);
+
     if (params.id) {
       this.cursosService.getCurso(params.id)
         .subscribe(
@@ -50,7 +54,6 @@ export class VerCursosComponent implements OnInit {
   }
 
   saveAprobado() {
-    delete this.curso.id;
     
     this.cursosService.saveCurso(this.curso)
       .subscribe(
