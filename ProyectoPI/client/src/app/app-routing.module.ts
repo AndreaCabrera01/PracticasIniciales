@@ -9,6 +9,8 @@ import { PerfilComponent} from './components/perfil/perfil.component';
 import { PublicacionesComentariosComponent } from './components/publicaciones-comentarios/publicaciones-comentarios.component';
 import { PublicacionesComentariosListComponent} from './components/publicaciones-comentarios-list/publicaciones-comentarios-list.component';
 import { VerCursosComponent} from './components/ver-cursos/ver-cursos.component'
+import { AprobadoslistComponent} from './components/aprobadoslist/aprobadoslist.component'
+
 
 const routes: Routes = [
   {
@@ -41,8 +43,17 @@ const routes: Routes = [
     component: PublicacionesComentariosComponent
   },
   {
+    path: 'publicaciones/vercomentarios/:id',
+    component: PublicacionesComentariosListComponent
+    
+  },
+  {
     path: 'ver-cursos/:id',
     component: VerCursosComponent
+  },
+  {
+    path: 'cursos/:id',
+    component: AprobadoslistComponent
   }
 ];
 

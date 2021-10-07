@@ -10,6 +10,7 @@ const indexRoutes_1 = __importDefault(require("./routes/indexRoutes"));
 const publicacionesRoutes_1 = __importDefault(require("./routes/publicacionesRoutes"));
 const comentariosRoutes_1 = __importDefault(require("./routes/comentariosRoutes"));
 const cursosRoutes_1 = __importDefault(require("./routes/cursosRoutes"));
+const cursosaprobadosRoutes_1 = __importDefault(require("./routes/cursosaprobadosRoutes"));
 const registerRoutes_1 = __importDefault(require("./routes/registerRoutes"));
 class Server {
     constructor() {
@@ -30,6 +31,7 @@ class Server {
         this.app.use('/api/comentarios', comentariosRoutes_1.default);
         this.app.use('/api/register', registerRoutes_1.default);
         this.app.use('/api/cursos', cursosRoutes_1.default);
+        this.app.use('/api/cursosaprobados', cursosaprobadosRoutes_1.default);
     }
     start() {
         this.app.listen(this.app.get('port'), () => {

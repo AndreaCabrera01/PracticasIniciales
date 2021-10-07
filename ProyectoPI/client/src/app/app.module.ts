@@ -18,7 +18,8 @@ import { PerfilComponent } from './components/perfil/perfil.component';
 import { PublicacionesComentariosComponent } from './components/publicaciones-comentarios/publicaciones-comentarios.component';
 import { PublicacionesComentariosListComponent } from './components/publicaciones-comentarios-list/publicaciones-comentarios-list.component';
 import { LoginComponent } from './login/login.component';
-import { VerCursosComponent } from './components/ver-cursos/ver-cursos.component'
+import { VerCursosComponent } from './components/ver-cursos/ver-cursos.component';
+import { AprobadoslistComponent } from './components/aprobadoslist/aprobadoslist.component'
 
 @NgModule({
   declarations: [
@@ -34,7 +35,8 @@ import { VerCursosComponent } from './components/ver-cursos/ver-cursos.component
     PublicacionesComentariosComponent,
     PublicacionesComentariosListComponent,
     LoginComponent,
-    VerCursosComponent
+    VerCursosComponent,
+    AprobadoslistComponent
   ],
   imports: [
     BrowserModule,
