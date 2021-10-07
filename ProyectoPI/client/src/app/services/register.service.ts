@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import {HttpClient} from '@angular/common/http';
 import { Registro } from '../model/Registro';
+import { Observable } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -25,7 +26,7 @@ export class RegisterService {
   saveRegister(registro: Registro){
     return this.http.post(`${this.API_URI}/register`,registro);
   }
-  updateRegister(id: string, updateRegistro: Registro){
+  updateRegister(id: string|undefined, updateRegistro: Registro): Observable<Registro>{
     return this.http.put(`${this.API_URI}/register/${id}`,updateRegistro);
   }
 

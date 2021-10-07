@@ -29,6 +29,10 @@ CREATE TABLE comentarios(
     comentario VARCHAR(255)
 );
 
+CREATE TABLE cursosDisp (
+    id INT(11) NOT NULL AUTO_INCREMENT PRIMARY KEY,
+    curso VARCHAR(255)
+);
 
 DESCRIBE publicaciones;
 

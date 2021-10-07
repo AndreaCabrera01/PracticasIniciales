@@ -40,13 +40,14 @@ class UsersController {
     }
     delete(req, res) {
         const { id } = req.params;
-        database_2.default.query('DELETE FROM users WHERE id=?', [id]);
+        database_2.default.query('DELETE FROM users WHERE id=?', [id]); 
         res.json({ message: 'The user was deleted' });
     }
     update(req, res) {
         const { id } = req.params;
-        database_2.default.query('UPDATE  users SET ? WHERE id = ?', [req.body, id]);
+        database_2.default.query('UPDATE users SET ? WHERE id = ?', [req.body, id]);
         res.json({ message: 'user UPDATE ' });
     }
 }
+
 exports.usersController = new UsersController();

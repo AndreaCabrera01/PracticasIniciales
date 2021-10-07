@@ -1,11 +1,8 @@
 
     <div class = "container p-10 text-center">
-      <div class=" text-center" *ngFor="let registro of registros">
-      <a class="btn btn-success btn-block" [routerLink]="['/perfil', registro.id]">VER PERFIL</a>
-    </div>
+     
       <hr/>
         <form class="form-inline">
-          
             <h3 >Buscar</h3>
             
           <input class="form-control" type="text" placeholder="" aria-label="Search">
@@ -40,8 +37,13 @@
                       </a>
                 </div>
             </div>
-        
-          
+      
+        </div>
+        <br>
+<hr/>
+<h4>PERFILES DISPONIBLES</h4>
+        <div class=" text-center" *ngFor="let registro of registros">
+          <a class="btn btn-success btn-block" [routerLink]="['/perfil', registro.id]">VER PERFIL - {{registro.id}}</a>
         </div>
         
     </div>

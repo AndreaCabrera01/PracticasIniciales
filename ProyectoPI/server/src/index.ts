@@ -6,6 +6,7 @@ import indexRoutes from './routes/indexRoutes';
 import publicacionesRoutes from './routes/publicacionesRoutes';
 import comentariosRoutes from './routes/comentariosRoutes';
 import register from './routes/registerRoutes';
+import cursosRoutes from './routes/cursosRoutes';
 import registerRoutes from './routes/registerRoutes';
 
 class   Server {
@@ -30,6 +31,7 @@ class   Server {
         this.app.use('/api/publicaciones',publicacionesRoutes)
         this.app.use('/api/comentarios',comentariosRoutes)
         this.app.use('/api/register', registerRoutes)
+        this.app.use('/api/cursos', cursosRoutes)
 
     }
     start(): void{
