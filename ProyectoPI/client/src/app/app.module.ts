@@ -17,7 +17,8 @@ import { LoginFormComponent } from './components/login-form/login-form.component
 import { PerfilComponent } from './components/perfil/perfil.component';
 import { PublicacionesComentariosComponent } from './components/publicaciones-comentarios/publicaciones-comentarios.component';
 import { PublicacionesComentariosListComponent } from './components/publicaciones-comentarios-list/publicaciones-comentarios-list.component';
-import { LoginComponent } from './login/login.component'
+import { LoginComponent } from './login/login.component';
+import { VerCursosComponent } from './components/ver-cursos/ver-cursos.component'
 
 @NgModule({
   declarations: [
@@ -32,7 +33,8 @@ import { LoginComponent } from './login/login.component'
     PerfilComponent,
     PublicacionesComentariosComponent,
     PublicacionesComentariosListComponent,
-    LoginComponent
+    LoginComponent,
+    VerCursosComponent
   ],
   imports: [
     BrowserModule,

@@ -22,11 +22,13 @@ class CursosController{
         console.log(result)
         res.json({message: 'cursosDisp saved'});
     }
+
     public delete (req: Request, res: Response){
         const {id} = req.params;
         db.query('DELETE FROM cursosDisp WHERE id=?', [id]);
         res.json({message: 'The cursosDisp was deleted'});
     }
+    
     public update (req: Request, res: Response){
         const {id} = req.params;
         db.query('UPDATE  cursosDisp SET ? WHERE id = ?', [req.body, id]);

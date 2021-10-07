@@ -34,6 +34,11 @@ CREATE TABLE cursosDisp (
     curso VARCHAR(255)
 );
 
+CREATE TABLE cursos (
+    id VARCHAR(11),
+    curso VARCHAR(255)
+);
+
 DESCRIBE publicaciones;
 
 

@@ -1,7 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router} from '@angular/router';
 import { RegisterService } from 'src/app/services/register.service';
+import { CursosService } from 'src/app/services/cursos.service';
 import { Registro } from 'src/app/model/Registro';
+import { Cursos } from 'src/app/model/cursos';
 
 @Component({
   selector: 'app-perfil',
@@ -20,10 +22,14 @@ export class PerfilComponent implements OnInit {
     email: ""
   };
 
+  cursos: any = [];
   
-  constructor(private loginService: RegisterService, private activatedRoute: ActivatedRoute, private router: Router) { }
+  constructor(private loginService: RegisterService, private activatedRoute: ActivatedRoute, private cursosService: CursosService,private router: Router) { }
 
   ngOnInit() {
+
+    this.getCursos();
+
     const params = this.activatedRoute.snapshot.params;
     if (params.id) {
       this.loginService.getRegister(params.id)
@@ -36,6 +42,16 @@ export class PerfilComponent implements OnInit {
         )
     }
 
+  }
+
+  getCursos() {
+    this.cursosService.getCursos()
+      .subscribe(
+        res => {
+          this.cursos = res;
+        },
+        err => console.error(err)
+      );
   }
 
   getRegistros() {

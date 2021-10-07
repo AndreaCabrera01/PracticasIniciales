@@ -44,10 +44,10 @@
           </div>
           <br>
           <h3>Créditos acumulados:</h3>
-          <h4>10</h4>
+          <h4>----</h4>
           <br>
-          <button class="btn btn-lg btn-primary btn-block" type="submit"><a class="nounderline text-white" >Guardar</a></button>
-          <button class="btn btn-lg btn-secondary btn-block" type="submit"><a href="/publicaciones" class="nounderline text-white">Cancelar</a></button>
+          <button class="btn btn-lg btn-primary btn-block" type="submit"><a href="/publicaciones" class="nounderline text-white" >Regresar</a></button>
+          <button class="btn btn-lg btn-secondary btn-block" type="submit"><a [routerLink]="['/ver-cursos']" class="nounderline text-white">Agregar Cursos</a></button>
           <br>
       </form>
     </div>
@@ -57,22 +57,17 @@
     <table class="table">
       <thead class="thead-dark">
         <tr>
-          <th scope="col">Código</th>
+          <th scope="col">No.</th>
           <th scope="col">Nombre del Curso</th>
-          <th scope="col">Créditos</th>
         </tr>
       </thead>
+      <div class="text-center" *ngFor="let curso of cursos">
       <tbody>
         <tr>
-          <th scope="row">1</th>
-          <td>Analisis y diseño de sistemas</td>
-          <td>10</td>
-        </tr>
-        <tr>
-          <th scope="row">2</th>
-          <td>Matematica para la Computación 1</td>
-          <td>10</td>
+          <th scope="row">{{curso.id}}</th>
+          <td>{{curso.curso}}</td>
         </tr>
       </tbody>
+    </div>
     </table>
     </div>
