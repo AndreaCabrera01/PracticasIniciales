@@ -8,9 +8,9 @@
          
           <div class="form-group">
             
-            <select type="text" name="curso"  placeholder="Cursos disponibles" class="form-control" autofocus>
+            <select type="text" name="curso" [(ngModel)]="curso.curso" placeholder="Cursos disponibles" class="form-control" autofocus>
             <br>
-              <option *ngFor="let curso of cursos" [value]="curso" >{{curso.curso}}</option>
+              <option *ngFor="let curso of cursos" >{{curso.curso}}</option>
             </select>
             <br><br>
         </div>

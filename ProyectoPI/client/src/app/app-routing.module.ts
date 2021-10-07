@@ -41,7 +41,7 @@ const routes: Routes = [
     component: PublicacionesComentariosComponent
   },
   {
-    path: 'ver-cursos',
+    path: 'ver-cursos/:id',
     component: VerCursosComponent
   }
 ];

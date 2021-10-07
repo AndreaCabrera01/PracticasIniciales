@@ -10,15 +10,6 @@ import { Cursos } from 'src/app/model/cursos';
   styleUrls: ['./ver-cursos.component.css']
 })
 export class VerCursosComponent implements OnInit {
-  registros: any = [];
-
-  registro: Registro = {
-    id: '0',
-    name: '',
-    lastname: '',
-    password: '',
-    email: ""
-  };
 
   cursos: any = [];
 
@@ -37,11 +28,10 @@ export class VerCursosComponent implements OnInit {
 
     const params = this.activatedRoute.snapshot.params;
     if (params.id) {
-      this.loginService.getRegister(params.id)
+      this.cursosService.getCurso(params.id)
         .subscribe(
           res => { 
-            this.registro = res;
-            this.registros = res;
+            this.curso = res;
           },
           err => console.log(err)
         )
@@ -61,6 +51,7 @@ export class VerCursosComponent implements OnInit {
 
   saveAprobado() {
     delete this.curso.id;
+    
     this.cursosService.saveCurso(this.curso)
       .subscribe(
         res => {
@@ -70,5 +61,4 @@ export class VerCursosComponent implements OnInit {
       )
   }
 
-  
 }

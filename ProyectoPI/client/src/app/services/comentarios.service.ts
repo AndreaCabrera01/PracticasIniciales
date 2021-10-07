@@ -22,7 +22,7 @@ export class ComentariosService {
   deleteComentarios(id: string){
     return this.http.delete(`${this.API_URI}/comentarios/${id}`);
   }
-  saveComentarios(comentario: Comentarios){
+  saveComentarios(comentario: Comentarios|JSON){
     return this.http.post(`${this.API_URI}/comentarios`,comentario);
   }
   updateComentariosn(id: string, updatedComentario: Comentarios): Observable<Comentarios>{
