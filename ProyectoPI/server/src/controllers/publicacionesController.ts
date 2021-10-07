@@ -22,6 +22,14 @@ class PublicacionesController{
     
     }
 
+    public async getOneTipo(req: Request, res:Response): Promise <void>{
+        const {tipo} = req.params;
+        await pool.query('SELECT * FROM publicaciones WHERE tipo= ?', [tipo]);
+        res.json({text: 'Publicacion encontrada'})
+
+    
+    }
+
     //public getOne(req: Request, res: Response){
      // const {id} = req.params;
      // db.query('SELECT * FROM publicaciones WHERE id = ?', [id], function(err, result, fields) {

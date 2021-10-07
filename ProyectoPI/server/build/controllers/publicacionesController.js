@@ -33,6 +33,15 @@ class PublicacionesController {
             res.json(result);
         });
     }
+    getOneTipo(req, res) {
+        const { tipo } = req.params;
+        database_2.default.query('SELECT * FROM publicaciones WHERE tipo = ?', [tipo], function (err, result, fields) {
+            if (err)
+                throw err;
+            res.json(result);
+        });
+    }
+
     crate(req, res) {
         const result = database_2.default.query('INSERT INTO publicaciones set ?', [req.body]);
         console.log(result);

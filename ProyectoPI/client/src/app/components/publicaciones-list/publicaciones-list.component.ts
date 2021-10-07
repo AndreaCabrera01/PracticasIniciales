@@ -32,6 +32,18 @@ export class PublicacionesListComponent implements OnInit {
       );
   }
 
+  getPublicacionTipo(tipo: string){
+    this.publicacionesService.getPublicacionTipo(tipo)
+      .subscribe(
+        res => {
+          this.publicaciones = res;
+        },
+        err => console.error(err)
+      );
+  }
+
+
+
   getRegistros() {
     this.loginService.getRegisters()
       .subscribe(
